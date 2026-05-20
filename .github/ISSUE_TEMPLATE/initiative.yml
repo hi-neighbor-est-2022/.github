@@ -1,0 +1,44 @@
+name: Initiative
+description: Strategic objective spanning multiple epics and repos
+labels: ["initiative"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Business goal and strategic context for this initiative"
+      placeholder: "What outcome does this initiative achieve and why does it matter?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: "Measurable outcomes that define completion"
+      placeholder: |
+        - [ ] Metric or outcome 1
+        - [ ] Metric or outcome 2
+    validations:
+      required: true
+
+  - type: input
+    id: target-date
+    attributes:
+      label: Target Date
+      description: "Expected completion (YYYY-MM-DD or quarter)"
+      placeholder: "2026-Q3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: epics
+    attributes:
+      label: Epics
+      description: "Link to child epics as they are created (tasklist format)"
+      placeholder: |
+        ```[tasklist]
+        - [ ] #epic-issue-number
+        ```
+    validations:
+      required: false

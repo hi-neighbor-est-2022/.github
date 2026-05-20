@@ -1,0 +1,64 @@
+name: Epic
+description: Large feature or workstream supporting an initiative
+labels: ["epic"]
+body:
+  - type: input
+    id: parent-initiative
+    attributes:
+      label: Parent Initiative
+      description: "Link to the parent initiative issue"
+      placeholder: "#issue-number"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "What this epic delivers and why it matters"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: "Outcomes that define this epic as complete"
+      placeholder: |
+        - [ ] Outcome 1
+        - [ ] Outcome 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: input
+    id: target-date
+    attributes:
+      label: Target Date
+      description: "Expected completion (YYYY-MM-DD or quarter)"
+      placeholder: "2026-Q3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: "Link to child tasks as they are created (tasklist format)"
+      placeholder: |
+        ```[tasklist]
+        - [ ] org/repo-name#issue-number
+        ```
+    validations:
+      required: false

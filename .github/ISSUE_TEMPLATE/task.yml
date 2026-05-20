@@ -1,0 +1,64 @@
+name: Task
+description: Implementation work item scoped to a single repo
+labels: ["task"]
+body:
+  - type: input
+    id: parent-epic
+    attributes:
+      label: Parent Epic
+      description: "Link to the parent epic issue in hinbor-backlog"
+      placeholder: "hi-neighbor-est-2022/hinbor-backlog#issue-number"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "Why this task exists and what it achieves"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: "Testable outcomes that define done (one per line)"
+      placeholder: |
+        - [ ] Outcome 1
+        - [ ] Outcome 2
+        - [ ] Outcome 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-plan
+    attributes:
+      label: Implementation Plan
+      description: "Technical approach — fill before starting work"
+      placeholder: |
+        1. Step one
+        2. Step two
+        3. Step three
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: "Summary of what was done — fill after implementation"
+    validations:
+      required: false
