@@ -1,28 +1,6 @@
 name: Task
 description: Implementation work item scoped to a single repo
-labels: ["task"]
 body:
-  - type: input
-    id: parent-epic
-    attributes:
-      label: Parent Epic
-      description: "Link to the parent epic issue in hinbor-backlog"
-      placeholder: "hi-neighbor-est-2022/hinbor-backlog#issue-number"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      options:
-        - critical
-        - high
-        - medium
-        - low
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:

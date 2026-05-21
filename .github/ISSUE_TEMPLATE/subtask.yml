@@ -1,16 +1,6 @@
 name: Subtask
 description: Granular implementation detail under a task
-labels: ["subtask"]
 body:
-  - type: input
-    id: parent-task
-    attributes:
-      label: Parent Task
-      description: "Link to the parent task issue"
-      placeholder: "hi-neighbor-est-2022/repo-name#issue-number"
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
